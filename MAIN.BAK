@@ -46,7 +46,7 @@ void init(){ //initialize game
 
 void paintScreen(){
    t_beginDraw=clock();
-   if(debug==2){
+   else if(debug==2){
       char temp[25];
 	draw_tileGrid(room_tileMap);//draw floor
 
