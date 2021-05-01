@@ -55,7 +55,6 @@ void paintScreen(){
 	draw_tileGrid(room_tileMapOver);// draw overlay parts (like trees)
 
 	//draw menu items
-	//draw_text(0,0,15,"ABCDEFGHIJKLMNO^nPQRS^c\x05TUVWXYZ0123456789.,:?!",0);
 	draw_realRow(0,0,"\x3\x5\x3\x5");
 	sprintf(temp,"F:%04d FPS:%d%d %d,%d",draw_frames,CTD,pl_X,pl_Y);
 	draw_text(0,94,15,temp,0);
@@ -79,7 +78,7 @@ void paintScreen(){
 /// ------------------------------------------------------- System functions
 void processInputs(){
    updateKeyReg();
-   if(keyReg[0x01]){running=0;} //escape
+   if(keyReg[0x01]){running=0;} //esc
    if(moving&&!inDialog){
       //if((happenedThisFrame>>0)&1U==0){
       if(happenedThisFrame==0){
@@ -96,19 +95,9 @@ void processInputs(){
 /// -------------------------------------------------------------- Game Loop
 void loop(){
    while(running){
-      //if(kbhit()){running=0;}
       //if((double)(clock()-t_lastDraw)/CLOCKS_PER_SEC>=(double)1/FRAMERATE){paintScreen();}
-
-      if(kbhit()){
-       //newKey=getch();
-      }
-
       if(draw_inRetrace()>0){draw_retrace++;}
       if(draw_retrace==120){if(!inDialog){paintScreen();}else{Dialog_paint();}draw_retrace=-1;}
-
-
-
-
 
       processInputs();
    }
@@ -117,7 +106,6 @@ void loop(){
 int main(){
    init();
    loop();
-
    termGame();
    printf("See you later!");
    return 0;

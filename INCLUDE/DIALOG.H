@@ -6,7 +6,7 @@ int inDialog=0;
 int Dialog_exit=0;
 int D_pitch=5; //default values
 int D_speed=5;
-int D_color=0; //0=blk 1=_red 2=_grn 3=_yel 4=_blu 5=_pur 6=_cyn 7=Lgry 8=_gry 9=red A=grn B=yel C=blu D=pur E=cyn F=wht
+int D_color=0;
 char* dialogResult="";
 char D_line1[30];
 char D_line2[30];
@@ -183,10 +183,8 @@ void Dialog_paint(){
 	draw_text(1,88,15,D_line3);
 }
 
-
-// \x0=dark blue \x4 = dark red \xf=white
-// 0=lime 6=Sky 5=lightBlue 4=cyan C=sandYellow E=yellow #=pink !=deepPurple ^=almostWhite *=orange
-// (=red ,=Yellow /=green ' '=deepBlue q=brown X=almostWhite \xf = white
+// 0=lime C=sandYellow E=yellow ^=almostWhite X=almostWhite \x0=dark blue \x4 = dark red
+// q=brown (=red *=orange ,=Yellow /=green 4=cyan 5=lightBlue 6=Sky ' '=deepBlue !=deepPurple #=pink \xf=white
 char* Dialog_getString(int index){
 switch(index){
 case 0: return "/a0001/TPOOPOO_THIS IS A TEST./h/nI AM GOING TO SPEAK IN/n/c BLUE/c\xf NOW./h/nWAIT A SECOND/w5./w5./w5./w5 OH FUCK!/nTHIS IS A NEW LINE./nTHIS IS ANOTHER./h/nARE WE SCROLLING OK?/h/nGOOD!/r";
