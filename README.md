@@ -9,4 +9,4 @@ It runs in Mode 13, so 320x200x256. It is compiled in Borland Turbo C 3.0 which 
 I intend to eventually port jinx to other platforms, the NES for example, or even OpenGL so games created with it can be compiled for modern PCs as well.
 For now, DOS will suffice. This is the very first time I tried to make a serious game engine, so this will largely be a learning experience with hopefully a satisfying result in the end.
 
-For more info about the World of Varel, click [here](https://varel.fandom.com)
+For more info about the World of Varel, click [here](https://varel.fandom.com/wiki/World_Of_Varel_Wiki)
